@@ -9,7 +9,7 @@ public class PhoneModel {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     private String uid;
-    private String user;
+    private Long user;
     private String number;
     private String ddd;
 
@@ -29,11 +29,11 @@ public class PhoneModel {
         this.uid = uid;
     }
 
-    public String getUser() {
+    public Long getUser() {
         return user;
     }
 
-    public void setUser(String user) {
+    public void setUser(Long user) {
         this.user = user;
     }
 
