@@ -5,6 +5,10 @@
 /out
 /build
 /.gradle
+/gradle
+gradlew
+gradlew.bat
+/.idea
 
 # Log file
 *.log
