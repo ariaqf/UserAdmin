@@ -1,1 +1,1 @@
-web: java -jar build/users-1.0.0.jar
+web: java -jar build/libs/users-1.0.0.jar
