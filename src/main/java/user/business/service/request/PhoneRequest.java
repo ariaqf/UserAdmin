@@ -1,13 +1,8 @@
-package user.business.entity;
+package user.business.service.request;
 
-import java.util.UUID;
-
-public class Phone {
+public class PhoneRequest {
     private String number;
     private String ddd;
-
-    public Phone() {
-    }
 
     public String getNumber() {
         return number;

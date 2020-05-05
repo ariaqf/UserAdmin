@@ -4,30 +4,14 @@ import javax.persistence.*;
 
 @Entity
 @Table(name= "phones")
+@IdClass(PhoneID.class)
 public class PhoneModel {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
-    private String uid;
     private Long user;
+    @Id
     private String number;
+    @Id
     private String ddd;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String id) {
-        this.uid = uid;
-    }
 
     public Long getUser() {
         return user;

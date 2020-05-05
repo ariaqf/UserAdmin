@@ -9,7 +9,7 @@ public class CreateRequest {
     private String name;
     private String email;
     private String password;
-    private List<Phone> phones;
+    private List<PhoneRequest> phones;
 
     public String getName() {
         return name;
@@ -35,11 +35,11 @@ public class CreateRequest {
         this.password = password;
     }
 
-    public List<Phone> getPhones() {
+    public List<PhoneRequest> getPhones() {
         return phones;
     }
 
-    public void setPhones(List<Phone> phones) {
+    public void setPhones(List<PhoneRequest> phones) {
         this.phones = phones;
     }
 }

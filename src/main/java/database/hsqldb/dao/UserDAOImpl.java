@@ -42,7 +42,7 @@ public class UserDAOImpl implements UserDAO {
         UserModel uModel;
         try {
             uModel = userModelFromUser(getUserByEmail(user.getEmail()));
-            uModel = udpateUserModelFromUser(uModel, user);
+            uModel = updateUserModelFromUser(uModel, user);
         } catch (UserNotFoundException e) {
             uModel = userModelFromUser(user);
         }
@@ -71,8 +71,6 @@ public class UserDAOImpl implements UserDAO {
         if(phoneModels != null) {
             for(PhoneModel p : phoneModels) {
                 Phone phone = new Phone();
-                phone.setId(p.getId());
-                phone.setUid(p.getUid());
                 phone.setDdd(p.getDdd());
                 phone.setNumber(p.getNumber());
                 phoneList.add(phone);
@@ -102,8 +100,6 @@ public class UserDAOImpl implements UserDAO {
         if(phones != null) {
             for(Phone p : phones) {
                 PhoneModel phoneModel = new PhoneModel();
-                phoneModel.setId(p.getId());
-                phoneModel.setUid(p.getUid());
                 phoneModel.setDdd(p.getDdd());
                 phoneModel.setNumber(p.getNumber());
                 phoneModelList.add(phoneModel);
@@ -112,13 +108,14 @@ public class UserDAOImpl implements UserDAO {
         return phoneModelList;
     }
 
-    private UserModel udpateUserModelFromUser(UserModel userModel, User user) {
+    private UserModel updateUserModelFromUser(UserModel userModel, User user) {
         userModel.setName(user.getName());
         userModel.setPassword(user.getPassword());
         userModel.setSalt(user.getSalt());
         userModel.setModified(user.getModified());
         userModel.setLastLogin(user.getLastLogin());
         userModel.setPhones(phoneModelsFromPhone(user.getPhones()));
+        userModel.setToken(user.getToken());
         return userModel;
     }
 }
