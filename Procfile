@@ -1,1 +1,1 @@
-web: gradlew bootRun
+web: java -jar build/users-1.0.0.jar
