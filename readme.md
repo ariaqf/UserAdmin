@@ -1,8 +1,11 @@
 # Users API
 ## Disclaimer
 This is an API that was made as part of an interview process. The endpoints described in this API are:
+
 /user/create
+
 /user/login
+
 /user/{uid}
 
 The tests were made so that they guarantee the business rules and not the communication rules so if it's needed to change to a CLI API or any other communication type it may be done easily.
